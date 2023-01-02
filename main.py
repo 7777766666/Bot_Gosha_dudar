@@ -25,7 +25,8 @@ def get_user_text(message):
     else:
         bot.send_message(message.chat.id, "I dont undestand you", parse_mode="html")
 
-# @bot.message_handler(content_types=["photo"])
-# def
+@bot.message_handler(content_types=["photo"])
+def get_user_photo(message):
+    bot.send_message(message.chat.id, "Wow, it is super photo")
 
 bot.polling(none_stop=True) #Чтоб бот работал постоянно
